@@ -24,11 +24,12 @@ namespace SD.Xamarin
             Container.RegisterTypeForNavigation<RegistPage>();
             Container.RegisterTypeForNavigation<LoginPage>();
             Container.RegisterTypeForNavigation<MasterPage>("Master");
+            Container.RegisterTypeForNavigation<DataCabinPage>();
+
             Container.RegisterTypeForNavigation<ChartPage>();
             Container.RegisterTypeForNavigation<GridPage>();
             Container.RegisterTypeForNavigation<GuagePage>();
             Container.RegisterTypeForNavigation<MapPage>();
-            Container.RegisterTypeForNavigation<DataCabinPage>();
         }
     }
 }
