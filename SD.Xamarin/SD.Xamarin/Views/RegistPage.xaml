@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SD.Xamarin.Views.RegistPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    Title="Regist"
+    prism:ViewModelLocator.AutowireViewModel="True">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Back" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout
+        Padding="20"
+        Spacing="20"
+        VerticalOptions="Center">
+
+        <Entry Placeholder="Username" Text="{Binding Username}" />
+        <Entry Placeholder="Password" Text="{Binding Password}" />
+        <Entry Placeholder="Password" Text="{Binding RePassword}" />
+
+        <Button
+            BackgroundColor="#77D065"
+            Command="{Binding RegistCommand}"
+            Text="Regist"
+            TextColor="White" />
+    </StackLayout>
+
+</ContentPage>
