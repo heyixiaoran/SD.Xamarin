@@ -31,6 +31,11 @@ namespace SD.Xamarin.iOS
             //x = typeof(Xamarin.Forms.Themes.LightThemeResources);
             //x = typeof(Xamarin.Forms.Themes.iOS.UnderlineEffect);
 
+            #if ENABLE_TEST_CLOUD
+            // requires Xamarin Test Cloud Agent
+            Xamarin.Calabash.Start();
+            #endif
+
             return base.FinishedLaunching(app, options);
         }
     }

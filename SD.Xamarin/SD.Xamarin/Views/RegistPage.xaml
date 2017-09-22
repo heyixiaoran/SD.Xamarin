@@ -16,9 +16,18 @@
         Spacing="20"
         VerticalOptions="Center">
 
-        <Entry Placeholder="Username" Text="{Binding Username}" />
-        <Entry Placeholder="Password" Text="{Binding Password}" />
-        <Entry Placeholder="Password" Text="{Binding RePassword}" />
+        <Entry
+            AutomationId="RegistUsername"
+            Placeholder="Username"
+            Text="{Binding Username}" />
+        <Entry
+            AutomationId="RegistPassword"
+            Placeholder="Password"
+            Text="{Binding Password}" />
+        <Entry
+            AutomationId="ReRegistPassword"
+            Placeholder="Password"
+            Text="{Binding RePassword}" />
 
         <Button
             BackgroundColor="#77D065"

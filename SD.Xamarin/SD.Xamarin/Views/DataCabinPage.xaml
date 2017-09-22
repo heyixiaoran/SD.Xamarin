@@ -13,7 +13,7 @@
     </ContentPage.ToolbarItems>
 
     <ListView
-        x:Name="listView"
+        AutomationId="DataCabinList"
         CachingStrategy="RecycleElement"
         GroupDisplayBinding="{Binding Key}"
         GroupShortNameBinding="{Binding Key}"

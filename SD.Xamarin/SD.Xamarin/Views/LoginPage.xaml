@@ -16,13 +16,18 @@
         Spacing="20"
         VerticalOptions="Center">
 
-        <Entry Placeholder="Username" Text="{Binding Username}" />
         <Entry
+            AutomationId="Username"
+            Placeholder="Username"
+            Text="{Binding Username}" />
+        <Entry
+            AutomationId="Password"
             IsPassword="true"
             Placeholder="Password"
             Text="{Binding Password}" />
 
         <Button
+            AutomationId="LoginButtons"
             BackgroundColor="#77D065"
             Command="{Binding LoginCommand}"
             Text="Login"

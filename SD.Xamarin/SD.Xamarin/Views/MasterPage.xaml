@@ -7,10 +7,11 @@
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
     xmlns:views="clr-namespace:SD.Xamarin.Views;assembly=SD.Xamarin"
     Title="Master"
-    prism:ViewModelLocator.AutowireViewModel="True">
+    prism:ViewModelLocator.AutowireViewModel="True"
+    AutomationId="MasterDetailPage">
 
     <MasterDetailPage.Master>
-        <NavigationPage Title="Required Foo" Icon="hamburger.png">
+        <NavigationPage Icon="hamburger.png">
             <x:Arguments>
                 <views:DataCabinPage />
             </x:Arguments>
