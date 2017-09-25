@@ -12,7 +12,7 @@ namespace SD.Xamarin.UITest
     public class Tests
     {
         private IApp _app;
-        private readonly Platform _platform;
+        private Platform _platform;
 
         public Tests(Platform platform)
         {
@@ -32,3 +32,4 @@ namespace SD.Xamarin.UITest
         }
     }
 }
+

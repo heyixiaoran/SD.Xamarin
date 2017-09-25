@@ -14,14 +14,15 @@ namespace SD.Xamarin.UITest
             {
                 return ConfigureApp
                        .Android
-                       .ApkFile("../../../SD.Xamarin.Droid/bin/Debug/SD.Xamarin.Droid-Signed.apk")
+                       .ApkFile("../../../SD.Xamarin/SD.Xamarin.Droid/bin/Debug/SD.Xamarin.Droid-Signed.apk")
                        .StartApp();
             }
 
             return ConfigureApp
                    .iOS
-                   .AppBundle("../../../SD.Xamarin.iOS/bin/iPhoneSimulator/Debug/SD.Xamarin.iOS.app")
+                   .AppBundle("../../../SD.Xamarin/SD.Xamarin.iOS/bin/iPhoneSimulator/Debug/SD.Xamarin.iOS.app")
                    .StartApp();
         }
     }
 }
+
