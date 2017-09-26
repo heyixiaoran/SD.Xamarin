@@ -30,6 +30,18 @@ namespace SD.Xamarin.UITest
         {
             _app.Screenshot("First screen.");
         }
+
+        [Test]
+        public void TestLogin()
+        {
+            _app.EnterText(n => n.Marked("Username"), "Name");
+            _app.EnterText(n => n.Marked("Password"), "Password");
+            _app.Tap(c => c.Button("LoginButton"));
+
+            _app.Repl();
+            AppResult[] result = _app.Query();
+            Assert.IsTrue(result.Any(), "Login");
+        }
     }
 }
 
