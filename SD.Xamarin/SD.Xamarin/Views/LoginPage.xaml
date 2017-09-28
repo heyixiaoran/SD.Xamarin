@@ -27,7 +27,7 @@
             Text="{Binding Password}" />
 
         <Button
-            AutomationId="LoginButtons"
+            AutomationId="LoginButton"
             BackgroundColor="#77D065"
             Command="{Binding LoginCommand}"
             Text="Login"

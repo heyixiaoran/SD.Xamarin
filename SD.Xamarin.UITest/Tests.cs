@@ -36,7 +36,7 @@ namespace SD.Xamarin.UITest
         {
             _app.EnterText(n => n.Marked("Username"), "Name");
             _app.EnterText(n => n.Marked("Password"), "Password");
-            _app.Tap(c => c.Button("LoginButtons"));
+            _app.Tap(c => c.Button("LoginButton"));
 
             _app.Repl();
             AppResult[] result = _app.Query();
