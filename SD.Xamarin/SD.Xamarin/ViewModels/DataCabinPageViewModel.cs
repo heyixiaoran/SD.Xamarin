@@ -97,6 +97,11 @@ namespace SD.Xamarin.ViewModels
 
         private async void ItemTapped()
         {
+            if (SelectedDataCabin == null)
+            {
+                return;
+            }
+
             switch (SelectedDataCabin.DisplayType)
             {
                 case DataCabinType.Chart:
@@ -112,9 +117,9 @@ namespace SD.Xamarin.ViewModels
                     await _navigationService.NavigateAsync("/Master/Navigation/" + nameof(MapPage));
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException();
+                    await _pageDialogService.DisplayAlertAsync("Error", "Type Error!!!", "OK");
+                    break;
             }
-
         }
 
         private void GoBack()
