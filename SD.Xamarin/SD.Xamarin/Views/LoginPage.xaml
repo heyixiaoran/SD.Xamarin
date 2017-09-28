@@ -16,6 +16,11 @@
         Spacing="20"
         VerticalOptions="Center">
 
+        <Image
+            Margin="0,20"
+            HorizontalOptions="CenterAndExpand"
+            Source="logo.png" />
+
         <Entry
             AutomationId="Username"
             Placeholder="Username"
