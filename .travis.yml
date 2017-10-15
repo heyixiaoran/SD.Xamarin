@@ -1,0 +1,29 @@
+language: node_js
+node_js: stable
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+#before_script:
+ # - npm install -g gulp
+
+script:
+  - hexo g
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "heyixiaoran" --{GitHub账户名称}
+  - git config user.email "heyixiaoran@vip.qq.com" --{Github账户邮箱}
+  - git add .
+  - git commit -m "Update"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+# E: Build LifeCycle
+
+branches:
+  only:
+    - SD.Xamarin --{源码分支名称}
+env:
+ global:
+   - GH_REF: https://github.com/heyixiaoran/SD.Xamarin --{仓库地址}
