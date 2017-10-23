@@ -14,7 +14,6 @@
 
     <ListView
         AutomationId="DataCabinList"
-        CachingStrategy="RecycleElement"
         GroupDisplayBinding="{Binding Key}"
         GroupShortNameBinding="{Binding Key}"
         IsGroupingEnabled="True"

@@ -34,11 +34,48 @@ namespace SD.Xamarin.UITest
         [Test]
         public void TestLogin()
         {
+            //—— Repl ——
+            //_app.EnterText(n => n.Marked("Username"), "Name");
+            //_app.EnterText(n => n.Marked("Password"), "Password");
+            //_app.Tap(c => c.Button("LoginButton"));
+            //_app.Screenshot("Login Finished");
+
+            //_app.Repl();
+
+            //AppResult[] result = _app.Query();
+            //Assert.IsTrue(result.Any(), "Login");
+
+
+            //—— Device ——
+            //_app.Tap(c => c.TextField("Username"));
+            //_app.EnterText(n => n.Marked("Username"), "Name");
+            //_app.WaitForElement(n => n.Marked("Username").Text("Name"));
+
+            //_app.Tap(c => c.TextField("Password"));
+            //_app.EnterText(n => n.Marked("Password"), "Password");
+            //_app.WaitForElement(n => n.Marked("Password").Text("Password"), "");
+
+            //_app.Tap(c => c.Button("LoginButton"));
+
+            //AppResult[] result = _app.Query();
+            //Assert.IsTrue(result.Any(), "Login");
+
+
+            //—— Test Cloud ——
+            _app.Tap(c => c.TextField("Username"));
             _app.EnterText(n => n.Marked("Username"), "Name");
+            _app.WaitForElement(n => n.Marked("Username").Text("Name"));
+
+            _app.Tap(c => c.TextField("Password"));
             _app.EnterText(n => n.Marked("Password"), "Password");
+            _app.WaitForElement(n => n.Marked("Password").Text("Password"), "");
+
+            _app.Screenshot("Fill Parameter Finished");
+
             _app.Tap(c => c.Button("LoginButton"));
 
-            _app.Repl();
+            _app.Screenshot("Login Finished");
+
             AppResult[] result = _app.Query();
             Assert.IsTrue(result.Any(), "Login");
         }
