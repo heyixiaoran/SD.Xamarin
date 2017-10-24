@@ -15,7 +15,6 @@ namespace SD.Xamarin.UITest
                 return ConfigureApp
                        .Android
                        .ApkFile("../../../SD.Xamarin/SD.Xamarin.Droid/bin/Release/SD.Xamarin.Droid.apk")
-                       .DeviceSerial("96e5b85b")
                        .EnableLocalScreenshots()
                        .StartApp();
 
