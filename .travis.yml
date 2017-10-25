@@ -1,7 +1,19 @@
+language: csharp
+solution: SD.Xamarin.sln
+
+mono:
+  - latest
+
+install:
+  - nuget restore SD.Xamarin.sln
+
+script:
+  - xbuild /p:Configuration=Release SD.Xamarin.sln
+
 deploy:
   provider: releases
-  api_key: "GITHUB OAUTH TOKEN"
-  file: "FILE TO UPLOAD"
+  api_key: "b0cc2098bc63e0ab3c004992335ff43db7794bb6"
+  file: "/SD.Xamarin/SD.Xamarin.Droid/bin/Release/SD.Xamarin.apk"
   skip_cleanup: true
   on:
     tags: true
