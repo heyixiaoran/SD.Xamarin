@@ -1,9 +1,6 @@
 language: csharp
 solution: SD.Xamarin.sln
 
-mono:
-  - latest
-
 install:
   - nuget restore SD.Xamarin.sln
 
