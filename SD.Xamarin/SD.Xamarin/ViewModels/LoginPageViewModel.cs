@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using Prism.Commands;
+﻿using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Services;
+
 using SD.Xamarin.Views;
-using Xamarin.Forms;
+using System.Windows.Input;
 
 namespace SD.Xamarin.ViewModels
 {
@@ -50,7 +45,6 @@ namespace SD.Xamarin.ViewModels
         public ICommand LoginCommand
         {
             get { return _loginCommand ?? new DelegateCommand(Login); }
-            set { _loginCommand = value; }
         }
 
         public LoginPageViewModel(INavigationService navigationService, IEventAggregator eventAggregator, IPageDialogService pageDialogService)
