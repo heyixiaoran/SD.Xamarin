@@ -37,7 +37,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tests.cs" />
+    <Compile Include="LoginPageUITest.cs" />
     <Compile Include="AppInitializer.cs" />
   </ItemGroup>
   <ItemGroup>

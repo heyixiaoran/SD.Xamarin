@@ -9,12 +9,12 @@ namespace SD.Xamarin.UITest
 {
     [TestFixture(Platform.Android)]
     [TestFixture(Platform.iOS)]
-    public class Tests
+    public class LoginPageUITest
     {
         private IApp _app;
         private Platform _platform;
 
-        public Tests(Platform platform)
+        public LoginPageUITest(Platform platform)
         {
             this._platform = platform;
         }
