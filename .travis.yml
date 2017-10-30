@@ -1,7 +1,8 @@
-deploy:
-  provider: releases
-  api_key: "GITHUB OAUTH TOKEN"
-  file: "FILE TO UPLOAD"
-  skip_cleanup: true
-  on:
-    tags: true
+language: csharp
+solution: SD.Xamarin.sln
+
+install:
+  - nuget restore SD.Xamarin.sln
+
+script:
+  - xbuild /p:Configuration=Release SD.Xamarin.sln
