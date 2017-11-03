@@ -82,12 +82,13 @@ namespace SD.Xamarin.UITest
             _app.Tap(x => x.Marked("Username"));
             _app.EnterText(x => x.Marked("Username"), "Name");
             _app.Screenshot("Fill Name Finished");
-            
-            _app.Tap(x => x.Marked("Password"));
+
             _app.WaitForElement(x => x.Marked("Password"));
+            _app.Tap(x => x.Marked("Password"));
             _app.EnterText(x => x.Marked("Password"), "Password");
+
             _app.Tap(x => x.Marked("LoginButton"));
-            _app.Screenshot("Long press on view with class: FormsImageView");
+            _app.Screenshot("Login");
 
             AppResult[] result = _app.Query();
             Assert.IsTrue(result.Any(), "Login");
@@ -96,28 +97,28 @@ namespace SD.Xamarin.UITest
         /// <summary>
         /// Xamarin Recorder
         /// </summary>
-        [Test]
-        public void NewTest()
-        {
-            _app.WaitForElement(x => x.Marked("Username"));
-            _app.Tap(x => x.Marked("Username"));
-            _app.EnterText(x => x.Marked("Username"), "Name");
-            _app.WaitForElement(x => x.Marked("Password"));
-            _app.Tap(x => x.Marked("Password"));
-            _app.EnterText(x => x.Marked("Password"), "Password");
-            _app.Tap(x => x.Marked("LoginButton"));
-            _app.Back();
-            //_app.ClearText(x => x.Marked("Password"));
-            //_app.ScrollUp();
-            //_app.ScrollDown();
-            //_app.SwipeLeftToRight();
-            //_app.SwipeRightToLeft();
-            //_app.TouchAndHold(x => x.Class("FormsImageView"));
-            _app.Screenshot("Long press on view with class: FormsImageView");
+        //[Test]
+        //public void NewTest()
+        //{
+        //    _app.WaitForElement(x => x.Marked("Username"));
+        //    _app.Tap(x => x.Marked("Username"));
+        //    _app.EnterText(x => x.Marked("Username"), "Name");
+        //    _app.WaitForElement(x => x.Marked("Password"));
+        //    _app.Tap(x => x.Marked("Password"));
+        //    _app.EnterText(x => x.Marked("Password"), "Password");
+        //    _app.Tap(x => x.Marked("LoginButton"));
+        //    _app.Back();
+        //    //_app.ClearText(x => x.Marked("Password"));
+        //    //_app.ScrollUp();
+        //    //_app.ScrollDown();
+        //    //_app.SwipeLeftToRight();
+        //    //_app.SwipeRightToLeft();
+        //    //_app.TouchAndHold(x => x.Class("FormsImageView"));
+        //    _app.Screenshot("Long press on view with class: FormsImageView");
 
-            AppResult[] result = _app.Query();
-            Assert.IsTrue(result.Any(), "Login");
-        }
+        //    AppResult[] result = _app.Query();
+        //    Assert.IsTrue(result.Any(), "Login");
+        //}
     }
 }
 

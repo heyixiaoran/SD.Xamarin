@@ -1,1 +1,9 @@
+E:
+cd E:\Code\SD.Xamarin
 packages\Xamarin.UITest.2.1.2\tools\test-cloud.exe submit E:\Code\SD.Xamarin\SD.Xamarin\SD.Xamarin.Droid\bin\Release\SD.Xamarin.Droid.apk 4379b82d67f33fb47cfea10ca4a69054 --devices 9d2c0a5a --series "master" --locale "en_US" --user xihz@xx.com --assembly-dir E:\Code\SD.Xamarin\SD.Xamarin.UITest\bin\Release
+
+
+
+mobile-center login
+{token}
+mobile-center test run uitest --app "heyixiaoran/SD.Xamarin.Android" --devices 522af1c5 --app-path E:\Code\SD.Xamarin\SD.Xamarin\SD.Xamarin.Droid\bin\Release\SD.Xamarin.Droid.apk  --test-series "master" --locale "en_US" --build-dir E:\Code\SD.Xamarin\SD.Xamarin.UITest\bin\Release
