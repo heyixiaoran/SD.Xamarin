@@ -83,6 +83,7 @@ namespace SD.Xamarin.UITest
             _app.EnterText(x => x.Marked("Username"), "Name");
             _app.Screenshot("Fill Name Finished");
 
+            _app.DismissKeyboard();
             _app.WaitForElement(x => x.Marked("Password"));
             _app.Tap(x => x.Marked("Password"));
             _app.EnterText(x => x.Marked("Password"), "Password");
