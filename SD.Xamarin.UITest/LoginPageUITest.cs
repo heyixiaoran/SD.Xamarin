@@ -88,6 +88,7 @@ namespace SD.Xamarin.UITest
             _app.Tap(x => x.Marked("Password"));
             _app.EnterText(x => x.Marked("Password"), "Password");
 
+            _app.DismissKeyboard();
             _app.Tap(x => x.Marked("LoginButton"));
             _app.Screenshot("Login");
 
